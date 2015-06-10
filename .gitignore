@@ -4,6 +4,6 @@
 !.zshrc
 !.config/terminator/*
 
-.vimrc
+!.vimrc
 
 !.gitignore
