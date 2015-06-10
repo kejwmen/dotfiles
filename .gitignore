@@ -1,4 +1,9 @@
 *
+
 !.gitignore
 !.zshrc
-!/.config/terminator/
+!.config/terminator/*
+
+.vimrc
+
+!.gitignore
