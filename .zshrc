@@ -45,7 +45,7 @@ ZSH_THEME="powerline"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux symfony2 bower composer git-extras git-flow git-prompt grunt node npm)
+plugins=(git archlinux symfony2 bower composer git-extras git-flow git-prompt grunt node npm last-working-dir)
 
 # User configuration
 
@@ -83,3 +83,5 @@ source $ZSH/oh-my-zsh.sh
 
 # FASD
 eval "$(fasd --init auto)"
+
+export GOPATH=$HOME/go

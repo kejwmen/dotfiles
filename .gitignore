@@ -2,7 +2,9 @@
 
 !.gitignore
 !.zshrc
-!.config/terminator/*
+
+.config/*
+!.config/terminator/config
 
 !.vimrc
 
