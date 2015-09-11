@@ -84,4 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # FASD
 eval "$(fasd --init auto)"
 
+alias gsap='git stash && git pull && git stash pop'
+
 export GOPATH=$HOME/go
