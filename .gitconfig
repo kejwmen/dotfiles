@@ -1,0 +1,23 @@
+[user]
+	email = mateusz.sip@gmail.com
+	name = Mateusz Sip
+[push]
+	default = simple
+[core]
+	editor = vim
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[alias]
+	l = log --oneline --graph
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	p = pull
+	r = rebase
+	m = merge
