@@ -1,0 +1,62 @@
+[global_config]
+  title_transmit_bg_color = "#505050"
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_image = None
+    login_shell = True
+[layouts]
+  [[default]]
+    [[[child0]]]
+      position = 0:29
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1019
+    [[[child1]]]
+      position = 961
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 509
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[child4]]]
+      position = 479
+      type = HPaned
+      order = 0
+      parent = child3
+    [[[child6]]]
+      position = 254
+      type = VPaned
+      order = 1
+      parent = child4
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child4
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child6
+    [[[terminal9]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal8]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child6
+[plugins]
