@@ -21,3 +21,5 @@
 	p = pull
 	r = rebase
 	m = merge
+[color]
+	ui = auto

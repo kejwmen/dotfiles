@@ -5,7 +5,7 @@ export ZSH=/home/sip/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerline"
+ZSH_THEME="xxf"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,6 +54,8 @@ export ANDROID_HOME=/home/sip/Android/Sdk
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export LD_LIBRARY_PATH="/usr/lib"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -86,4 +88,18 @@ eval "$(fasd --init auto)"
 
 alias gsap='git stash && git pull && git stash pop'
 
-export GOPATH=$HOME/go
+# Listing aliases
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -lha --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+
+# Modified commands
+alias grep='grep --color=auto'
+
+
+## Privileged access
+if [ $UID -ne 0 ]; then
+    alias scat='sudo cat'
+    alias svim='sudo vim'
+    alias root='sudo su'
+fi
