@@ -45,7 +45,7 @@ ZSH_THEME="xxf"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux symfony2 bower composer git-extras git-flow git-prompt grunt node npm last-working-dir)
+plugins=(git gitignore archlinux symfony2 bower composer git-extras git-flow git-prompt grunt node npm last-working-dir)
 
 # User configuration
 
