@@ -1,10 +1,10 @@
 [global_config]
   suppress_multiple_term_dialog = True
   title_font = Hack 11
-  title_transmit_fg_color = "#d3d0c8"
-  title_transmit_bg_color = "#2d2d2d"
-  title_inactive_fg_color = "#d3d0c8"
   title_inactive_bg_color = "#747369"
+  title_inactive_fg_color = "#d3d0c8"
+  title_transmit_bg_color = "#2d2d2d"
+  title_transmit_fg_color = "#d3d0c8"
   title_use_system_font = False
 [keybindings]
 [layouts]
@@ -66,7 +66,9 @@
     background_color = "#2d2d2d"
     background_image = None
     cursor_color = "#cccccc"
+    font = Hack 10
     foreground_color = "#d3d0c8"
     login_shell = True
     palette = "#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#d3d0c8:#747369:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec"
     scrollback_lines = 2048
+    use_system_font = False
