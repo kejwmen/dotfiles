@@ -1,1 +1,1 @@
-/home/sip/.spf13-vim-3/.vimrc
+/home/sip/.vim/vimrc
