@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitignore archlinux symfony2 bower composer git-extras git-flow git-prompt grunt node npm last-working-dir)
+plugins=(git gitignore archlinux symfony2 bower composer git-extras git-flow git-prompt grunt node npm last-working-dir fasd)
 
 # User configuration
 
@@ -84,7 +84,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gsap='git stash && git pull && git stash pop'
+alias gsap='git stash && git pull --rebase && git stash pop'
 
 # Listing aliases
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -102,13 +102,17 @@ if [ $UID -ne 0 ]; then
     alias root='sudo su'
 fi
 
+## matsip.com mySQL tunnel
+alias matsipdb='ssh -L 3307:127.0.0.1:3306 sip@matsip.com'
+
+alias wttr='curl http://wttr.in/poznan'
+
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
 source $ZSH/oh-my-zsh.sh
-
 
 # powerlevel9k settings
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -123,3 +127,6 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%{%F{249}%}\u250f"
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%F{249}%}\u2517%{%F{default}%} "
 POWERLEVEL9K_RAM_ELEMENTS=ram_free
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
