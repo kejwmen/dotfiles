@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
-export TERM="xterm-256color"
+export TERM="screen-256color"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -107,6 +107,9 @@ alias matsipdb='ssh -L 3307:127.0.0.1:3306 sip@matsip.com'
 
 alias wttr='curl http://wttr.in/poznan'
 
+alias yabackup="pacman -Qqe > ~/pacman.lst"
+alias yarestore="pacman -S --needed --noconfirm $(cat ~/pacman.lst)"
+
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
@@ -116,8 +119,7 @@ source $ZSH/oh-my-zsh.sh
 
 # powerlevel9k settings
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
 POWERLEVEL9K_STATUS_VERBOSE=false
 DEFAULT_USER=$USER
 POWERLEVEL9K_HIDE_BRANCH_ICON=true
@@ -130,3 +132,4 @@ POWERLEVEL9K_RAM_ELEMENTS=ram_free
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+if [ -z "$TMUX" ]; then exec tmux; fi;
