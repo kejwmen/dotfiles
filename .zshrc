@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # powerlevel9k settings
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs history time)
 POWERLEVEL9K_STATUS_VERBOSE=false
 DEFAULT_USER=$USER
 POWERLEVEL9K_HIDE_BRANCH_ICON=true
@@ -132,4 +133,6 @@ POWERLEVEL9K_RAM_ELEMENTS=ram_free
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+[[ $- != *i* ]] && return
 if [ -z "$TMUX" ]; then exec tmux; fi;
+

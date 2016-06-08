@@ -37,6 +37,7 @@ instance=spotify
 interval=5
 signal=10
 separator=true
+label=
 
 # Volume indicator
 #
@@ -56,7 +57,7 @@ separator=true
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 label=M
-separator=false
+separator=true
 interval=30
 
 #[memory]
