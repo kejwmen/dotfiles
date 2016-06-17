@@ -15,8 +15,8 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:System San Francisco Display 12
 
-gaps inner 12
-gaps outer 0
+gaps inner 14
+gaps outer 4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -94,32 +94,36 @@ bindsym $mod+a focus parent
 set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace3 "3: IDE"
-set $workspace4 "4: "
-set $workspace5 "5: "
-set $workspace6 "6: "
-set $workspace7 "7: "
-set $workspace8 "8: Slack"
-set $workspace9 "9: Skype"
+set $workspace4 "4: "
+set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: stuff"
+set $workspace8 "8: stuff"
+set $workspace9 "9: "
 set $workspace10 "10: "
 set $workspaceF "F: "
 
 assign [class="google-chrome"] $workspace1
 assign [class="jetbrains-phpstorm"] $workspace3
-assign [class="Skype"] $workspace9
+assign [class="Skype"] $workspace6
 assign [class="Spotify"] $workspace10
 assign [class="spotify"] $workspace10
-assign [class="Slack"] $workspace8
-assign [class="Steam"] $workspace7
-assign [class="^Vlc"] $workspace6
-assign [class="^Rhythmbox"] $workspace5
+assign [class="Slack"] $workspace6
+assign [class="^Franz"] $workspace6
+assign [class="Steam"] $workspace8
+assign [class="^Vlc"] $workspace9
+assign [class="^Rhythmbox"] $workspace9
 assign [class="^nautilus"] $workspaceF
 assign [class="^Nemo"] $workspaceF
+assign [class="^Nylas N1"] $workspace5
+assign [class="Mysql-workbench-bin"] $workspace4
 
 # for_window [class="^Spotify$"] floating enable
 
 workspace $workspace1 output DP1
 workspace $workspace2 output HDMI2
 workspace $workspace3 output HDMI2
+workspace $workspace4 output HDMI2
 workspace $workspace5 output HDMI2
 workspace $workspace6 output HDMI2
 workspace $workspace7 output HDMI2
