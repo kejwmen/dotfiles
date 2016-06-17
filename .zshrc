@@ -133,6 +133,6 @@ POWERLEVEL9K_RAM_ELEMENTS=ram_free
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-[[ $- != *i* ]] && return
-if [ -z "$TMUX" ]; then exec tmux; fi;
+#[[ $- != *i* ]] && return
+#if [ -z "$TMUX" ]; then exec tmux; fi;
 
