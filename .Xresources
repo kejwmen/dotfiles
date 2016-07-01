@@ -15,6 +15,7 @@ rofi.opacity: 90
 URxvt.perl-ext-common: default,matcher,clipboard,osc-xterm-clipboard
 ! Look
 URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=16:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=16:antialias=true:hinting=true
+! URxvt*font: xft:Inconsolata:pixelsize=16:antialias=true:hinting=true,xft:Inconsolata:pixelsize=16:antialias=true:hinting=true
 URxvt*letterSpace: -1
 URxvt*scrollBar: false
 URxvt.transparent:   true
