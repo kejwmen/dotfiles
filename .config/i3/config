@@ -16,8 +16,8 @@ set $mod Mod4
 font pango:System San Francisco Display 12
 #font pango:Hack 12
 
-gaps inner 14
-gaps outer 4
+gaps inner 12
+gaps outer 2
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -100,23 +100,22 @@ set $workspace5 "5: "
 set $workspace6 "6: "
 set $workspace7 "7: stuff"
 set $workspace8 "8: stuff"
-set $workspace9 "9: "
+set $workspace9 "9: "
 set $workspace10 "10: "
-set $workspaceF "F: "
 
 assign [class="google-chrome"] $workspace1
 assign [class="jetbrains-phpstorm"] $workspace3
+assign [class="jetbrains-idea"] $workspace3
 assign [class="Skype"] $workspace6
 assign [class="Spotify"] $workspace10
 assign [class="spotify"] $workspace10
 assign [class="Slack"] $workspace6
 assign [class="^Franz"] $workspace6
 assign [class="Steam"] $workspace8
-assign [class="^Vlc"] $workspace9
-assign [class="^Rhythmbox"] $workspace9
-assign [class="^nautilus"] $workspaceF
-assign [class="^Nemo"] $workspaceF
+assign [class="^nautilus"] $workspace9
+assign [class="^Nemo"] $workspace9
 assign [class="^Nylas N1"] $workspace5
+assign [class="^Thunderbird"] $workspace5
 assign [class="Mysql-workbench-bin"] $workspace4
 
 # for_window [class="^Spotify$"] floating enable
@@ -129,9 +128,8 @@ workspace $workspace5 output HDMI2
 workspace $workspace6 output HDMI2
 workspace $workspace7 output HDMI2
 workspace $workspace8 output HDMI2
-workspace $workspace9 output HDMI2
+workspace $workspace9 output DP1
 workspace $workspace10 output HDMI2
-workspace $workspaceF output DP1
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -203,44 +201,62 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color            #262626
+set $bg-color            #fdfdfd
+set $bg-color-t          #fdfdfdC0
 set $inactive-bg-color   #262626
-set $text-color          #f3f4f5
+set $inactive-bg-color-t #262626C0
+set $text-color          #262626
+set $inactive-text-color #707580
+set $urgent-bg-color     #E53935
+set $urgent-bg-color-t   #E53935
+
+#set $bg-color            #262626C0
+set $inactive-bg-color   #262626
+#set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3blocks
-    tray_output primary
-	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-
-}
+#bar {
+#    #i3bar_command i3bar -t
+#    #status_command i3blocks
+#    tray_output none
+#	colors {
+#		background $bg-color-t
+#	    separator #757575
+#        statusline $text-color
+#
+#		#                  border               background           text
+#		focused_workspace  $text-color          $text-color          $bg-color
+#		active_workspace   $text-color          $text-color          $bg-color-t
+#		inactive_workspace $bg-color-t          $bg-color-t          $inactive-text-color
+#		urgent_workspace   $urgent-bg-color     $urgent-bg-color     $text-color
+#	}
+#
+#}
 
 #for_window [class="Skype"] floating enable
 
-bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18"
+bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18" -lines=10
+bindsym $mod+c exec rofi -show window -font "System San Francisco Display 18" -lines=10
 
-exec_always "feh --bg-scale /home/sip/Pictures/wallpaper.jpg"
-exec_always "xrandr --output VIRTUAL1 --off --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI3 --off --output HDMI2 --mode 1920x1080 --pos 1920x28 --rotate normal --output HDMI1 --off --output VGA1 --off"
+exec_always "feh --bg-scale /home/sip/Pictures/wall.jpg --bg-scale /home/sip/Pictures/wall.jpg"
+#exec_always "xrandr --output VIRTUAL1 --off --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI3 --off --output HDMI2 --mode 1920x1080 --pos 1920x28 --rotate normal --output HDMI1 --off --output VGA1 --off"
+exec_always "xrandr --output VIRTUAL1 --off --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI3 --off --output HDMI2 --mode 2560x1080 --pos 1920x28 --rotate normal --output HDMI1 --off --output VGA1 --off"
+
+#exec --no-startup-id nitrogen --restore
 
 exec_always --no-startup-id dunst
+#exec_always --no-startup-id albert
 exec --no-startup-id compton -f
-
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  pidof zenity || zenity --title "Calendar" --calendar
+fi
+
+
+FORMAT="${BLOCK_INSTANCE:-%d-%m %H:%M:%S}"
+DATETIME=$(date "+${FORMAT}")
+
+echo "${DATETIME}"
+echo "${DATETIME}"
+echo ""

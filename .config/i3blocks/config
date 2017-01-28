@@ -24,7 +24,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/home/sip/.config/i3blocks/blocks/$BLOCK_NAME
 separator_block_width=20
 markup=none
 
@@ -32,9 +32,9 @@ markup=none
 #
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-[mediaplayer]
+[playerctl]
 instance=spotify
-interval=5
+interval=1
 signal=10
 separator=true
 label=
@@ -44,8 +44,9 @@ label=
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
-label=
+[audio]
+#label=
+label=
 instance=Master
 #instance=PCM
 interval=1
@@ -58,7 +59,7 @@ separator=true
 [memory]
 label=M
 separator=true
-interval=30
+interval=10
 
 #[memory]
 #label=SWAP
@@ -95,16 +96,6 @@ interval=30
 #instance=eth0
 #interval=5
 
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[cpu_usage]
-label=C
-interval=10
-min_width=CPU: 100.00%
-#separator=false
-
 #[load_average]
 #interval=10
 
@@ -119,8 +110,8 @@ min_width=CPU: 100.00%
 
 # Date Time
 #
-[time]
-command=date '+%m-%d %H:%M:%S'
+[datetime]
+#command=date '+%m-%d %H:%M:%S'
 interval=1
 
 # OpenVPN support

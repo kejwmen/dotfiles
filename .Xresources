@@ -5,6 +5,7 @@ rofi.color-active: #1d1f21, #81a2be, #1d1f21, #81a2be, #1d1f21
 rofi.color-window: #1d1f21, #ffffff
 rofi.width: 100
 rofi.padding: 449
+rofi.height: 500
 rofi.fullscreen: true
 rofi.bw: 0
 rofi.lines: 10
@@ -19,14 +20,19 @@ URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=16:antialias=true:hinting=tr
 URxvt*letterSpace: -1
 URxvt*scrollBar: false
 URxvt.transparent:   true
-URxvt.shading:       10
+URxvt.tintColor: #FFFFFF
+URxvt.shading: 15
+URxvt*externalBorder:     3
+URxvt*internalBorder:     7
+URxvt*borderLess:         false
+URxvt*borderColor: #c5c8c6
 ! Feel
 URxvt.iso14755: False
 URxvt.iso14755_52: False
-URxvt.keysym.Home: \033[1~
-URxvt.keysym.End: \033[4~
-URxvt.keysym.KP_Home: \033[1~
-URxvt.keysym.KP_End: \033[4~
+!URxvt.keysym.Home: \033[1~
+!URxvt.keysym.End: \033[4~
+!URxvt.keysym.KP_Home: \033[1~
+!URxvt.keysym.KP_End: \033[4~
 URxvt.keysym.M-Down: \033[1;3B
 URxvt.keysym.M-Up: \033[1;3A
 URxvt.keysym.M-Left: \033[1;3D
